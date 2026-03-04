@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grace Native Kakanin</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Native Kakanin">
+        <meta name="author" content="Lance Gryshler C. Nugoy">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <div id="header">
+            <a class="home-button" href="index.html">
+                <img src="./images/logo-nobg.png" class="home-button-image">
+            </a>
+            <ul id="nav">
+                <li class="nav-item"><a href="index.html">Login</a></li>
+                <li class="nav-item"><a href="home.html">Home</a></li>
+                <li class="nav-item"><a href="about.html">About Us</a></li>
+                <li class="nav-item"><a href="menu.html">Menu</a></li>
+                <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+                <li class="nav-item"><a href="form-placingorder.html">Place Order</a></li>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+        <div id="landing-content">
+            <div class="right-background"></div>
+            <div id="landing-left">
+                <div class="welcome-cont">
+                    <h1 class="welcome w1">Made with</h1>
+                    <h1 class="welcome w2">Pure Love</h1>
+                </div>
+                <p>
+                    <b>Come and try our products.</b>
+                 We can assure you that everything is fresh and delicious. Don't buy products that only look good in the picture, here what you see in the picture is what you get.Don't be fooled by other products, with us we will ensure that it is delicious and most importantly, it is cheap. So come and visit our business!
+                </p>
+            </div>
+            <div id="landing-center">
+                <img class="logo" src="images/logo-nobg.png">
+            </div>
+            <div id="landing-right">
+                <div class="vertical-text">Grace Native<br>Kakanin</div>
+            </div>
+        </div>
+        <footer class="footer">
+            &copy; 2025 Your Company. All rights reserved.
+        </footer>
+        <script src="./js/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#landing-content").css("right", "-220px").animate({
+                    right: "0px"
+                }, {
+                    duration: 1000,
+                    easing: "swing"
+                });
+            });
+        </script>
+    </body>
+</html>

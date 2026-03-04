@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User Login | Grace Native Kakanin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="./images/favicon.ico">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.form-container:hover {
+    box-shadow: 0 0 20px rgba(0, 207, 24, 0.5);
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.form-container input:focus {
+    transform: scale(1.05);
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 207, 24, 0.5);
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.form-container button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 207, 24, 0.5);
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-login img {
+    width: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-login img:hover {
+    transform: scale(1.2);
+}
+
+.toggle-link {
+    margin-top: 15px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #007BFF;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    display: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-wrapper">
+    <div class="form-container">
+
+        <h2 id="formTitle">User Login</h2>
+
+        <!-- LOGIN FORM -->
+        <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <p class="error" id="loginError">Invalid email or password.</p>
+        </form>
+
+        <!-- REGISTER FORM -->
+        <form id="registerForm" style="display:none;">
+            <input type="email" id="registerEmail" placeholder="Email" required>
+            <input type="password" id="registerPassword" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+
+        <!-- SOCIAL LOGIN (DUMMY) -->
+        <div class="social-login">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" onclick="socialRegister('facebook')" alt="Facebook">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/IOS_Google_icon.png" onclick="socialRegister('google')" alt="Google">
+        </div>
+
+        <div class="toggle-link" onclick="toggleForm()">
+            Don't have an account? Register
+        </div>
+
+    </div>
+</div>
+
+<script>
+// Toggle Login/Register
+function toggleForm() {
+    const login = document.getElementById("loginForm");
+    const register = document.getElementById("registerForm");
+    const title = document.getElementById("formTitle");
+    const toggle = document.querySelector(".toggle-link");
+
+    if (login.style.display === "none") {
+        login.style.display = "block";
+        register.style.display = "none";
+        title.textContent = "User Login";
+        toggle.textContent = "Don't have an account? Register";
+    } else {
+        login.style.display = "none";
+        register.style.display = "block";
+        title.textContent = "Register Account";
+        toggle.textContent = "Already have an account? Login";
+    }
+}
+
+// REGISTER
+document.getElementById("registerForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const email = document.getElementById("registerEmail").value;
+    const password = document.getElementById("registerPassword").value;
+
+    localStorage.setItem("userEmail", email);
+    localStorage.setItem("userPassword", password);
+
+    alert("Registration successful! Please login.");
+    toggleForm();
+});
+
+// LOGIN
+document.getElementById("loginForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const email = document.getElementById("loginEmail").value;
+    const password = document.getElementById("loginPassword").value;
+
+    const storedEmail = localStorage.getItem("userEmail");
+    const storedPassword = localStorage.getItem("userPassword");
+
+    if(email === storedEmail && password === storedPassword){
+        window.location.href = "home.html";
+    } else {
+        document.getElementById("loginError").style.display = "block";
+    }
+});
+
+// DUMMY SOCIAL REGISTER
+function socialRegister(platform){
+    const dummyEmail = platform + "@user.com";
+    const dummyPassword = "social123";
+
+    localStorage.setItem("userEmail", dummyEmail);
+    localStorage.setItem("userPassword", dummyPassword);
+
+    alert("Registered using " + platform + " (dummy login).");
+    window.location.href = "form-placingorder.html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grace Native Kakanin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Native Kakanin">
+    <meta name="author" content="Lance Gryshler C. Nugoy">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease-in-out;
+            text-align: center;
+        }
+        .form-container:hover {
+            box-shadow: 0 0 20px rgba(0, 207, 24, 0.5);
+        }
+        .form-container input, .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .form-container input:focus, .form-container select:focus {
+            transform: scale(1.1);
+            border-color: #007BFF;
+            outline: none;
+            box-shadow: 0 0 15px rgba(0, 207, 24, 0.5);
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 10px;
+        }
+        .form-container button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 207, 24, 0.5);
+        }
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        #nav {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+        }
+
+        #nav li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        #nav li a:hover {
+            color: #007BFF;
+        }
+
+        #nav .active a {
+            color: #007BFF;
+        }
+        .main-content {
+            display: flex;
+            justify-content: center;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <div id="header">
+        <a href="index.html">
+            <img src="./images/logo-nobg.png" width="120">
+        </a>
+
+        <ul id="nav">
+            <li><a href="index.html">Login</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li class="active"><a href="form-placingorder.html">Place Order</a></li>
+        </ul>
+    </div>
+
+    <!-- ORDER FORM -->
+    <div class="form-container">
+        ...
+    </div>
+  <div class="main-content">
+    <div class="form-container">
+        <h2>Place Your Order</h2>
+<form action="https://formspree.io/f/xlgwknve" method="POST">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+
+    <input type="email" name="email" placeholder="Your Email" required>
+
+    <input type="tel" name="phone" placeholder="Your Phone" required>
+
+    <select name="product" required>
+        <option value="">Select Product</option>
+        <option value="Bibingka Kanin">Bibingka Kanin</option>
+        <option value="Bibingka Pinipig">Bibingka Pinipig</option>
+        <option value="Bibingka Cassava">Bibingka Cassava</option>
+        <option value="Sapin-Sapin">Sapin-Sapin</option>
+        <option value="Maja Ube">Maja Ube</option>
+        <option value="Maja Mais">Maja Mais</option>
+        <option value="Kalamay Pinipig">Kalamay Pinipig</option>
+        <option value="Biringhi">Biringhi</option>
+    </select>
+
+    <select name="size" required>
+        <option value="">Select Size</option>
+        <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+        <option value="Extra Large">Extra Large</option>
+    </select>
+
+    <input type="number" name="quantity" placeholder="Quantity" min="1" required>
+
+    <textarea name="address" placeholder="Delivery Address" rows="3" required></textarea>
+
+    <button type="submit">Place Order 😊</button>
+
+</form>
+    </div>
+    </div>
+</body>
+</html>
+
+

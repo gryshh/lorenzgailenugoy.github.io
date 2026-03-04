@@ -1,0 +1,476 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    background: url('./images/background.jpg') repeat-y;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.clearfix {
+    clear: both;
+}
+
+
+#header {
+    padding: 2px;
+}
+
+.home-button {
+    padding: 10px;
+    float: left;
+    text-decoration: none;
+}
+
+.home-button-image {
+    width: 30px;
+    width: 30px;
+}
+
+#nav {
+    flex-direction: row;
+    margin: 10px 2px;
+    padding: 0;
+    float: right;
+}
+
+#nav .nav-item {
+    display: inline-block;
+    padding: 2px 10px;
+}
+
+#nav .nav-item.active {
+    background: #0c371c;
+}
+
+#nav .nav-item a {
+    color: rgb(149, 188, 20);
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(32, 192, 43, 0.74);
+    font-size: 14px;
+}
+
+#landing-content {
+    padding: 10px 5px;
+    position: relative;
+    right: 0;
+}
+
+#landing-left {
+    float: left;
+    width: 40%;
+}
+#landing-left p {
+    padding: 20px;
+    font-size: 20px;
+    text-align: justify;
+    color: #4e4b4b;
+}
+#landing-center {
+    float: left;
+    width: 45%;
+    text-align: center;
+    position: relative;
+}
+#landing-center img {
+    margin-top: 50px;
+}
+#landing-right {
+    float: right;
+    width: 15%;
+    padding: 0;
+    text-shadow: 4px 4px #185a11;
+    color: #bbd20f;
+    margin-top: 35px;
+    position: relative;
+}
+
+.vertical-text {
+    position: absolute;
+    right: 0;
+    writing-mode: vertical-rl; 
+    transform: rotate(180deg); 
+    white-space: nowrap; 
+    font-size: 80px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.right-background {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    background-color: green;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+
+#right-content {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+#main-content {
+    padding: 10px 5px;
+}
+
+#left-content {
+    float: left;
+    width: 50%;
+}
+
+#right-content {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.logo {
+    max-width: 100%;
+}
+
+#menu-images {
+    position: relative;
+    padding: 20px 5px;
+    text-align: center;
+    margin: 0 auto;
+    height: 350px;
+}
+
+#menu-images .menu-image {
+    position: absolute;
+    display: inline-block;
+    /* float: left; */
+    width: 19%;
+    padding: 5px;
+    height: 50px;
+}
+
+#menu-images .menu-image img {
+    height: 200px;
+    width: 200px;
+}
+
+#menu-images .menu-image.mi-1 {
+    top: 0px;
+    left: 1%;
+}
+
+#menu-images .menu-image.mi-2 {
+    top: 60px;
+    left: 20.5%;
+}
+
+#menu-images .menu-image.mi-3 {
+    top: 100px;
+    left: 40%;
+}
+
+#menu-images .menu-image.mi-4 {
+    top: 60px;
+    left: 60%;
+}
+
+#menu-images .menu-image.mi-5 {
+    top: 0;
+    left: 80%;
+}
+
+#card-content {
+    padding: 10px 5px;
+    margin: 0 auto;
+}
+
+#card-content .card-title {
+    text-align: center;
+    color: rgb(9, 89, 23)
+}
+
+#card-content .card {
+    width: 33.3%;
+    height: 300px;
+    float: left;
+    text-align: center;
+    margin: 0 auto;
+    color: green;
+}
+
+#card-content .card.card-xl {
+    height: 350px;
+}
+
+#card-content .card:hover .card-div {
+    border: 2px solid rgb(0, 255, 8);
+    box-shadow: 0 0 10px 1px rgba(121, 224, 111, 0.8);
+}
+
+#card-content .card .card-div {
+    border: 2px solid gray;
+    padding: 10px;
+    margin: 10px;
+    height: 100%;
+    border-radius: 15px;
+}
+
+#card-content .card img {
+    width: 100px;
+    height: 100px;
+}
+
+/* HOME */
+
+.welcome-cont {
+    padding: 25px;
+    font-size: 3vw;
+    color: #c69898;
+    text-shadow: 2px 2px 2px #b17f7f;
+}
+
+.welcome-cont .w2 {
+    text-indent: 1em;
+}
+
+.welcome-cont .w3 {
+    text-indent: 2em;
+}
+
+.welcome-cont .p {
+    font-size: 10px;
+    text-shadow: 0;
+}
+
+
+/* ABOUT US  */
+.about-us-cont {
+    padding: 25px;
+    font-size: 25px;
+    color: #127909;
+    
+}
+
+.about-us-cont h1 {
+    text-indent: 1em;
+    text-shadow: 2px 2px 2px #0a8a25;
+}
+
+.about-right-content {
+    position: relative;
+    padding-top: 20px;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+
+.about-right-content .about-img-1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+.about-right-content .about-img-2 {
+    position: absolute;
+    top: 40px;
+    left: 300px;
+}
+
+.about-right-content .about-vid-1 {
+    position: absolute;
+    top: 200px;
+    left: 20px;
+}
+
+
+.about-right-content .about-vid-2 {
+    position: absolute;
+    top: 320px;
+    left: 320px;
+}
+
+
+/* PRODUCTS */
+#product-content {
+    padding: 10px 5px;
+    margin: 0 auto;
+}
+
+#product-content .product-title {
+    text-align: center;
+    color: rgb(0, 0, 0)
+}
+
+#product-content .product-item {
+    width: 25%;
+    float: left;
+    text-align: center;
+    margin: 0 auto;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#product-content .product-item:hover .product-item-div{
+    transform: scale(1.3);
+            box-shadow: 0px 0px 30px rgba(255, 255, 0, 0.8);
+    
+}
+
+#product-content .product-item .product-item-div {
+    border: 2px solid gray;
+    padding: 10px;
+    margin: 10px;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#product-content .product-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+#product-content .item-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+#product-content .item-size {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+#product-content .item-price {
+    font-size: 14px;
+    color: rgb(0, 0, 0)
+}
+
+/* CONTACT */
+.contact-us-left {
+    padding: 70px;
+    /* border: 2px solid gray; */
+    border-radius: 10px;
+    margin:20px;
+}
+.contact-us-right {
+    text-align: center;
+    padding: 0px;
+    /* border: 2px solid gray; */
+    border-radius: 10px;
+    margin:20px;
+}
+.contact-us-right img{
+    width: -webkit-fill-available;
+    padding: 54px 30px;
+}
+
+
+/* SMALL SCREEN */
+@media screen and (max-width: 800px) {
+
+    #landing-left, #landing-center, #landing-right {
+        width: 100%;
+        position: static;  
+    }
+    #landing-right .vertical-text {
+        writing-mode: unset;
+        transform: none; 
+        position: static;
+        font-size: 40px;
+        padding: 20px 0;
+        margin-top: 0;
+    }
+    
+    #left-content, #right-content {
+      width: 100%;
+    }
+
+    .right-background {
+        display: none;
+    }
+
+    #nav .nav-item {
+        padding: 2px 10px;
+        font-size: 14px;
+    }
+
+    .welcome-cont {
+        text-align: center;
+        font-size: 6vw;
+    }
+    .welcome-cont h1 {
+        padding: 0 5px;
+    }
+    .welcome-cont .w2 {
+        text-indent: 0;
+    }
+    
+    .welcome-cont .w3 {
+        text-indent: 0;
+    }
+
+    .about-us-cont {
+        text-align: center;
+        font-size: 4vw;
+    }
+
+    .about-right-content {
+        position: static;
+        margin: 0 auto;
+    }
+
+    .about-right-content .about-img-1, .about-right-content .about-img-2,.about-right-content .about-vid-1,.about-right-content .about-vid-2 {
+        position: static;
+        top: 0;
+        left: 0;
+        margin: 10px 0px;
+    }
+
+    #menu-images {
+        height: auto;
+    }
+    #menu-images .menu-image {
+        width: 45%;
+        position: static;
+        top: 0;
+        left: 0;
+    }
+
+    .mi-1,.mi-2,.mi-3,.mi-4,.mi-5 {
+        top: 0;
+        left: 0;
+        position: static;
+    }
+
+
+    #card-content .card {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #card-content .card .card-div {
+        padding: 0 20px;
+    }
+
+    #product-content .product-item {
+        width: 50%;
+        margin-top: 10px;
+    }
+
+    #product-content .product-item .product-item-div {
+        padding: 0 10px;
+    }
+    
+    #product-content .product-img {
+        margin-top: 10px;
+    }
+    #product-content .product-img img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contact-us-left {
+        padding: 70px 10px;
+    }
+    
+}

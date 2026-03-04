@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Menu</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #111;
+            margin: 0;
+        }
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 10px;
+            background: linear-gradient(45deg, #ff00ff, #ff9900);
+            box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .menu a:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="#">Login</a>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Menu</a>
+        <a href="#">Contact</a>
+        <a href="#">Place Order</a>
+    </div>
+</body>
+</html>
